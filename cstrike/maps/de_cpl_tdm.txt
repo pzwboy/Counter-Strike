@@ -1,0 +1,20 @@
+de_cpl_tdm - Bomb/Defuse
+by [POD]ILL bot (0) (ILL-JAH@yandex.ru)
+
+A Crazy motherfucker`s organization
+named "Global pizdets" wants to
+occupy one of leagues (CPL or CAL).
+
+Good guies (counter-Terrorists):
+Prevent the "Global pizdets" from
+bombing CPL`s gate or CAL`s gate
+or kill all crazy motherfuckers.
+
+Crazy motherfuckers (terrorists):
+Blow up CPL`s gate or CAL`s gate
+or kill all good guies.
+
+Other Notes: There are 2 bomb targets
+on the map.
+
+(Press FIRE to continue)

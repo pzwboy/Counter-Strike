@@ -1,0 +1,208 @@
+// Command Menu definition
+// 
+// Basic Format:
+//		"<Bound Key>" "<Button Text>" "<Command sent to server>"
+//
+// 
+//
+//
+// Buttons can also open up submenus, as follows:
+// {
+// 	"Some More Options",
+//	{
+//		...
+//	}
+// }
+//
+//
+// Buttons preceded with "CUSTOM" are handled in special ways. They can only be moved
+// around or deleted.
+//
+//
+// Limitations:
+//		Maximum of 40 menus.
+//		Maximum of 100 buttons per menu.
+
+//--------------------------------------------------------
+// Everything below here is editable
+
+"1" "&1 Server Settings"
+{
+	"1" "OP Password"    "messagemode rcon_password"
+	"2" "Restart Round 3sec" "rcon sv_restartround 3"
+        "3" "Refresh 3"       "exec Refresh.cfg"
+	"4" "Restart Game"    "rcon restart"
+	"5" "Start Money"
+	{
+		"1" "$800" "rcon mp_startmoney 800"
+		"2" "$16000" "rcon mp_startmoney 16000"
+	}
+
+	"6" "Set Time"
+	{
+
+		"1" "TimeLimit (min)"
+		{
+		"1" "time 20" "rcon mp_timelimit 20"
+		"2" "time 30" "rcon mp_timelimit 30"
+		"3" "time 50" "rcon mp_timelimit 50"
+		"4" "time MAX" "rcon mp_timelimit 0"
+		}
+
+		"2" "RoundTime (min)"
+		{
+		"1" "time 2" "rcon mp_roundtime 2"
+		"2" "time 3" "rcon mp_roundtime 3"
+		"3" "time 4" "rcon mp_roundtime 4"
+		"4" "time 5" "rcon mp_roundtime 5"
+		}
+	
+		"3" "FreezeTime (sec)"
+		{
+		"1" "time 0" "rcon mp_freezetime 0"
+		"2" "time 3" "rcon mp_freezetime 3"
+		"3" "time 4" "rcon mp_freezetime 4"
+		"4" "time 5" "rcon mp_freezetime 5"
+		}
+
+		"4" "BuyTime (sec)"
+		{
+		"1" "timesecond 30" "rcon mp_buytime 0.5"
+		"2" "timesecond 60" "rcon mp_buytime 1"
+		"3" "timesecond 90" "rcon mp_buytime 1.5"
+		"4" "timesecond 120" "rcon mp_buytime 2"
+		}
+		
+		"5" "C4timer"
+		{
+			"1" "C4timer 35" "rcon mp_c4timer 35"
+			"2" "C4timer 45" "rcon mp_c4timer 45"
+	        }
+	}
+	"7" "AutoTeamBalance"
+	{
+		"1" "ON" "rcon mp_autoteambalance 1; rcon mp_limitteams 2"
+		"2" "OFF" "rcon mp_autoteambalance 0; rcon mp_limitteams 32"
+	}
+
+	"8" "FriendlyFire"
+	{
+		"1" "ON" "rcon mp_friendlyfire 1; rcon mp_tkpunish 0; rcon mp_autokick 0"
+		"2" "OFF" "rcon mp_friendlyfire 0"
+	}
+
+	"9" "Black Hold"
+	{
+		"1" "ON" "rcon mp_fadetoblack 1"
+		"2" "OFF" "rcon mp_fadetoblack 0"
+	}
+
+	"0" "ForceChaseCam"
+	{
+		"1" "Free" "rcon mp_forcecamera 0"
+		"2" "Teammate" "rcon mp_forcecamera 1"
+		"3" "Cadaver" "rcon mp_forcecamera 2"
+
+		}
+
+	}
+
+	
+"2" "&2 Game Settings"
+{
+	"1" "Graph adjustment"
+	{
+		"1" "network Shape"
+		{
+			"1" "OFF"	 "net_graph 0"
+			"2" "Pattern 1"	 "net_graph 1"
+			"3" "Pattern 2"	 "net_graph 2"
+			"4" "Pattern 3"	 "net_graph 3"
+		}
+		"2" "Demonstration position"
+		{
+			"1" "Left side"	     "net_graphpos 3"
+			"2" "Middle"	     "net_graphpos 2"
+			"3" "Right side"     "net_graphpos 1"
+		}
+		"3" "FPS Demonstration"
+		{
+			"1" "ON"	"cl_showfps 1"
+			"2" "OFF"	"cl_showfps 0"
+		}
+		"4" "FPS Customize"
+		{
+			"1" "101"	"fps_max 101"
+			"2" "85"	"fps_max 85"
+			"3" "75"	"fps_max 75"
+               }
+		"5" "Character shadow"
+		{
+			"1" "ON"	"cl_shadows 1"
+			"2" "OFF"	"cl_shadows 0"
+		}
+		"6" "Weather effect"
+		{
+			"1" "ON"	"cl_weather 1"
+			"2" "OFF"	"cl_weather 0"
+		}
+	}
+        "2" "Left or Right"
+	{
+		"1" "Left Hand"		"cl_righthand 0"
+		"2" "Right Hand"	"cl_righthand 1"
+	}
+	"3" "Fast switch"
+	{
+		"1" "ON"	"hud_fastswitch 1"
+		"2" "OFF"	"hud_fastswitch 0"
+	}
+	"4" "Dynamic Crosshair"
+	{
+		"1" "ON"	"cl_dynamiccrosshair 1"
+		"2" "OFF"	"cl_dynamiccrosshair 0"
+	}
+	"5" "Network time delay"
+	{
+		"1" "Normal 0.10"	  "ex_interp 0.1"
+		"2" "Latency 0.75"	  "ex_interp 0.75"
+		"3" "Ahead time 0.01"     "ex_interp 0.01"
+	}
+	"6" "Crosshair color"	"adjust_crosshair"
+	"7" "Cut Weapon"
+	{
+		"1" "Maintenance Weapon" "_cl_autowepswitch 0"
+		"2" "Cut Weapon"         "_cl_autowepswitch 1"
+	}
+
+	"8" "Radar Customize"
+	{
+	"1" "Transparent"	"cl_radartype 0"
+	"2" "Solid"	        "cl_radartype 1"
+	}
+}
+"3" "&3 Replacement map"
+{
+	
+	"1" "Choice Map"
+	{
+		"1" "&1 de_aztec"	"rcon changelevel de_aztec"
+		"2" "&2 de_cbble"	"rcon changelevel de_cbble"
+		"3" "&3 de_dust2"	"rcon changelevel de_dust2"
+		"4" "&4 de_inferno"	"rcon changelevel de_inferno"
+		"5" "&5 de_nuke"	"rcon changelevel de_nuke"
+		"6" "&6 de_train"	"rcon changelevel de_train"
+                "7" "&7 de_cpl_tdm"	"rcon changelevel de_cpl_tdm"
+                "8" "&8 de_cpl_fire"	"rcon changelevel de_cpl_fire"
+                "9" "&9 de_cpl_mill"	"rcon changelevel de_cpl_mill"
+                "0" "&0 de_cpl_strike"	"rcon changelevel de_cpl_strike"
+        }
+	"2" "Manual input" "messagemode changelevel"
+}
+}
+
+}
+"4" "&4 Replacement name"  "messagemode name"
+"5" "&5 Mouse sehsitivity" "messagemode sensitivity"
+"6" "&6 Exit"
+}

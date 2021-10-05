@@ -1,0 +1,14 @@
+// overview description file for de_cpl_tdm.bsp
+
+global 
+{
+	ZOOM	1.5
+	ORIGIN	1800	0	-32
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/de_cpl_tdm.bmp"
+	HEIGHT	-250
+}
